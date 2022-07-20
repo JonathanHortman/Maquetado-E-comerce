@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Comerce</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid gx-0">
+
+
+        <!-- Navbar section -->
+        <nav class="row navContainer gx-1">
+
+            <div class="col-4 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-start align-items-center ">
+                <img class=" logoImage" src="./assets/iconsImages/LOGO.png" alt="page logo">
+            </div>
+
+            <div class="col-8 col-sm-8 col-md-5 col-lg-7 d-flex flex-row justify-content-center align-items-center">
+
+                <input class="searchInput" type="text" placeholder="Buscar productos">
+                <button class="searchButton"><img src="./assets/iconsImages/Vector.png" alt="search button"></button>
+
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-4 col-lg-3 d-flex justify-content-evenly align-items-center">
+                <img class="heartIcon" src="./assets/iconsImages/i-fav.png" alt="heart icon">
+                <li class="nav-item dropdown d-flex align-items-center accountDropDown">
+                    <img class="userIcon" src="./assets/iconsImages/user.png" alt="user icon">
+                    <a style="color: black"> Mi Cuenta</a> <img src="./assets/iconsImages/downArrow.svg" alt="down arrow">
+                </li>
+                <div class="cartIconContainer">
+                    <img class="cartIcon" src="./assets/iconsImages/i-cart.svg" alt="cart icon">
+                    <div id="checkout">0</div>
+                </div>
+
+            </div>
+
+        </nav>
+        <!-- navbar/ -->
+
+        <!-- Products navbar -->
+        <nav class="navbar navbar-expand-lg navbar-custom" style="background-color: var(--mainColor);">
+            <div class="container-fluid">
+                <a class="nav-link dropdown-toggle dropCustom" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    PRODUCTOS
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse liCustom" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link aCustom" href="#">Reyes Magos</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link aCustom" href="#">Ofertas Camping</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link aCustom" href="#">Promo Aires</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link aCustom" href="#">Lanzamiento</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Products navbar/-->
+
+        <!-- Sales section -->
+        <div class="bigestContainer">
+
+            <div class="row d-flex justify-content-center fatherContainer">
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 leftContainer">
+                    <div class="tele">
+                        <img id="mainImage" class="imgBig" src="./assets/productsImages/P4.jpg" alt="img">
+                    </div>
+                    <div class="teleschiquitas">
+                        <img onclick="changeImage(`P1`, `img2`)" id="img2" class="imgSmall" src="./assets/productsImages/P1.jpg" alt="">
+                        <img onclick="changeImage(`P2`, `img3`)" id="img3" class="imgSmall" src="./assets/productsImages/P2.jpg" alt="">
+                        <img onclick="changeImage(`P3`, `img4`)" id="img4" class="imgSmall" src="./assets/productsImages/P3.jpg" alt="">
+                        <img onclick="changeImage(`P4`, `img5`)" id="img5" class="imgSmall" src="./assets/productsImages/P4.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 rightContainer">
+                    <div class="compras">
+                        <p class="productTitle">SMART TV SAMSUNG 85 NEO QLED 4K QN85A HDR10</p>
+                        <p class="paymentText">Precio en 1 pago</p>
+                        <div class="offerContainer">
+                            <p class="priceNumber">$ 641.979</p>
+                            <p class="previousPrice">$ 710.890</p>
+                            <p class="offText">30% OFF</p>
+                        </div>
+                        <div class="quotaContainer">
+                            <img src="./assets/iconsImages/card.svg" alt="card icon">
+                            <div><b>12</b> cuotas x<b>$2.291</b></div>
+                            <a href="#">Ver cuotas y medios de pago</a>
+                        </div>
+                        <div class="butContainer">
+                            <button onclick="pay()">Comprar</button>
+                            <img src="./assets/iconsImages/i-fav.png" alt="fav icon">
+                            <img src="./assets/iconsImages/letter.png" alt="letter icon">
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="envios">
+                        <div class="zoneContainer">
+                            <img src="" alt="">
+                            <a href=""></a>
+                        </div>
+
+                        <div class="sendContainer">
+                            <div class="sendLogoContainer">
+                                <img src="./assets/iconsImages/envio.svg" alt="send image">
+                                <a href="#">Ver zonas disponibles</a>
+                            </div>
+                            <div class="generalContainer">
+                                <img class="storeImage" src="./assets/iconsImages/store.svg" alt="store image">
+                                <div class="costContainer">
+                                    <div class="sendingText">Retiro GRATIS por Sucursal</div>
+                                    <a href="#">Calcular costo de envío</a>
+                                </div>
+                                <img class="truckImage" src="./assets/iconsImages/truck.png" alt="truck image">
+                                <div class="costContainer">
+                                    <div class="sendingText">Envío a todo el pais</div>
+                                    <a href="#">Calcular costo de envío</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Sales section/-->
+
+
+        <!-- Descriptions section -->
+        <div>
+
+            <div class=" DescriptionContainer">
+                <h3 id="desc" onclick="changeText('desc')">Descripción</h3>
+                <h3 id="data" onclick="changeText('data')">Ficha Técnica</h3>
+            </div>
+
+            <div class="fatherCont">
+                <div class="textDescContainer">
+                    <p id="loremText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut libero tincidunt, gravida dui
+                        vitae,
+                        mattis neque. Vestibulum quis arcu eget ipsum tempus ornare. Quisque finibus elit nec purus
+                        mollis,
+                        eu malesuada nibh semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut libero
+                        tincidunt, gravida dui vitae, mattis neque. Vestibulum quis arcu eget ipsum tempus ornare.
+                        Quisque
+                        finibus elit nec purus mollis, eu malesuada nibh semper. Nullam pellentesque molestie nisi, vel
+                        tincidunt augue lacinia eu. Ut vitae gravida massa, vel vulputate ligula. Pellentesque habitant
+                        morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut sodales urna
+                        ullamcorper
+                        feugiat suscipit. Sed ut bibendum massa. Vivamus rhoncus sit amet quam nec suscipit.
+                        Aliquam lacinia quam urna, a feugiat odio condimentum vitae. Aliquam imperdiet pulvinar mollis.
+                       
+                        Ut metus arcu, dignissim a orci quis, faucibus posuere tortor. Quisque quis velit non sem
+                        facilisis
+                        facilisis. Vivamus eu ipsum sem. Donec odio diam, venenatis at lectus vitae, imperdiet
+                        vestibulum
+                        tortor. Aenean in sapien dignissim, tempor felis sed, semper sapien. Proin malesuada cursus
+                        diam,
+                        sed aliquam sapien commodo ut. Aenean convallis nisl vel lorem interdum ornare. Phasellus
+                        iaculis
+                        orci eget porttitor convallis. Aenean fringilla in tellus at dictum.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Descriptions section/-->
+
+        <!-- Categorie sections -->
+        <div class="fatherContain">
+            <h2>Más en esta categoría</h2>
+            <div class="row d-flex justify-content-center allProductsContainer gx-0">
+                <img class="leftArrow" src="./assets/iconsImages/arrow-left.svg" alt="left arrow">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2 productsContainer">
+                    <div class="productImgContainer">
+                        <img src="./assets/productsImages/laundry.svg" alt="laundry image">
+                    </div>
+                    <p>Smart Tv Samsung 85 Neo<br>Qled 4k Qn85a Hdr10</p>
+                    <div class="productsPriceContainer">
+                        <h4 class="mainPrice">$ 27.499</h4>
+                        <h4 class="oldPrice">$ 31.890</h4>
+                        <h4 class="offPrice">30% OFF</h4>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2 productsContainer">
+                    <div class="productImgContainer">
+                        <img src="./assets/productsImages/stove.svg" alt="stove image">
+                        <div class="sendImageContainer"><img src="./assets/iconsImages/envio.svg" alt="send image"></div>
+                        <div class="offImageContainer"><img src="./assets/iconsImages/descuento.svg" alt="discount image"></div>
+                    </div>
+                    <p>Smart Tv Samsung 85 Neo<br>Qled 4k Qn85a Hdr10</p>
+                    <div class="productsPriceContainer">
+                        <h4 class="mainPrice">$ 27.499</h4>
+                        <h4 class="oldPrice">$ 31.890</h4>
+                        <h4 class="offPrice">30% OFF</h4>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2 productsContainer">
+                    <div class="productImgContainer">
+                        <img src="./assets/productsImages/centrifuge.svg" alt="centrifuge image">
+                        <div class="offImageContainer"><img src="./assets/iconsImages/descuento.svg" alt="discount image"></div>
+                    </div>
+                    <p>Smart Tv Samsung 85 Neo<br>Qled 4k Qn85a Hdr10</p>
+                    <div class="productsPriceContainer">
+                        <h4 class="mainPrice">$ 27.499</h4>
+                        <h4 class="oldPrice">$ 31.890</h4>
+                        <h4 class="offPrice">30% OFF</h4>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2 productsContainer">
+                    <div class="productImgContainer">
+                        <img src="./assets/productsImages/iron.svg" alt="iron image">
+                    </div>
+                    <p>Smart Tv Samsung 85 Neo<br>Qled 4k Qn85a Hdr10</p>
+                    <div class="productsPriceContainer">
+                        <h4 class="mainPrice">$ 27.499</h4>
+                        <h4 class="oldPrice">$ 31.890</h4>
+                        <h4 class="offPrice">30% OFF</h4>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2 productsContainer">
+                    <div class="productImgContainer">
+                        <img src="./assets/productsImages/phone.svg" alt="phone image">
+                        <div class="sendImageContainer"><img src="./assets/iconsImages/envio.svg" alt="send image"></div>
+                    </div>
+                    <p>Smart Tv Samsung 85 Neo<br>Qled 4k Qn85a Hdr10</p>
+                    <div class="productsPriceContainer">
+                        <h4 class="mainPrice">$ 27.499</h4>
+                        <h4 class="oldPrice">$ 31.890</h4>
+                        <h4 class="offPrice">30% OFF</h4>
+                    </div>
+                </div>
+                <img class="rightArrow" src="./assets/iconsImages/arrow-right.svg" alt="right arrow">
+            </div>
+        </div>
+        <!-- Categorie sections/ -->
+
+        <!-- Footer -->
+        <div class="d-flex flex-column footerContainer ">
+            <div class="row d-flex flex-row justify-content-between mb-2 ">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3  d-flex flex-row numCont">
+                    <div>
+                        <img class="m-1" src="./assets/iconsImages/phone.png" alt="phone image">
+                    </div>
+                    <div class="phoneNumContainer">
+                        <h5>Atencion Telefónica</h5>
+                        <h3>0810-333-9470</h3>
+                        <h3>(0236) 4421081</h3>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 helpCenterContainer">
+                    <h4>CENTRO DE AYUDA</h4>
+                    <h5>Medios de Pago y Envío</h5>
+                    <h5>Preguntas Frecuentes</h5>
+                    <h5>Política de Cambios</h5>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3 institutionContainer">
+                    <h4>INSTITUCIONAL</h4>
+                    <h5>La Empresa</h5>
+                    <h5>Sucursales</h5>
+                    <h5>Contacto</h5>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3 subsContainer">
+                    <h4>SUSCRIBETE</h4>
+                    <h5>Recibí en tu email nuestras ofertas e ingresos</h5>
+                    <div class="sendEmailContainer">
+                        <input type="text" placeholder="Email">
+                        <button class="d-flex justify-content-center align-items-center">Enviar</button>
+                    </div>
+                </div>
+
+
+            </div>
+            <hr>
+            <div class="row d-flex flex-row justify-content-arrownd ">
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                    <h5 class="copyright">©️ CLIENTE 2022 - Todos los derechos reservados</h5>
+                </div>
+                <div class="d-flex justify-content-end col-6 col-sm-6 col-md-6 col-lg-6 ">
+                    <img class="codeImage" src="./assets/iconsImages/fiscalCode.png" alt="fiscal code">
+                </div>
+            </div>
+        </div>
+        <!-- Footer/ -->
+        <!-- sweet alert -->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!-- bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+        <!-- javascript -->
+        <script src="js/scripts.js"></script>
+        <script src="js/text.js"></script>
+</body>
+
+</html>
